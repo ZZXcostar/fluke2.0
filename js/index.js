@@ -3,19 +3,16 @@
             $(".lineRight").fadeIn()
             $(".lineImg3").addClass("intro");
             $('.lineImg3').animate({left:'83%',opacity: '0'},1000,setblack1);
-            $('.lineImgLine3').animate({left:'0%',width: '100%'},1000);
             setTimeout(() => {
                 $(".lineTop").fadeIn()
                 $(".lineImg1").addClass("intro");
                 $('.lineImg1').animate({left:'83%',opacity: '0'},1000,setblack2);
-                $('.lineImgLine1').animate({left:'0%',width: '100%'},1000);
                 $('.lineImg1').css('left', '0%')
             }, 1000);
             setTimeout(() => {
                 $(".lineLeft").fadeIn()
                 $(".lineImg2").addClass("intro");
                 $('.lineImg2').animate({left:'83%',opacity: '0'},1000,setblack3);
-                $('.lineImgLine2').animate({left:'0%', width: '100%'},1000);
                 $('.lineImg2').css('left', '0%')
             }, 2000);
         
@@ -69,7 +66,7 @@
             
         }
         goamian()
-        
+
         $(".email").bind("input propertychange",function () {
             if(!isEmail($(".email").val())) {
                 $(".email").next(".verification").show()

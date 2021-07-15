@@ -22,6 +22,7 @@
 
 <body>
   <div class="content">
+    <!-- 头部信息start -->
     <header class="header d-flex justify-between align-center">
       <div class="header_left d-flex align-center">
         <img src="./img/logo.png" />
@@ -31,40 +32,42 @@
         <div onclick="ShowDiv('MyDiv','fade')" class="headerHerf">下载详细参数</div>
       </div>
     </header>
-    <!-- 渐入动画开始 -->
+    <!-- 头部信息end -->
 
-    <!-- 渐入动画结束 -->
+    <!-- 内容区域start -->
+    <section class="pageBody">
+      <!-- 渐入动画start -->
 
-    <!-- 线条运动开始 -->
-    <section class="pageCenter">
+      <!-- 渐入动画end -->
+
+      <!-- 线条运动start -->
       <div class="secondAnimation">
         <!--  -->
         <div class="triangle_content">
           <div class="triangle">
               <div class="line lineTop">
                   <div class="lineImgContent">
-                      <img class="lineImgLine1" src="./img/4-光线1-1.png">
                       <img class="lineImg1" src="./img/4-光点1-2.png" />
                   </div>
               </div>
               <div class="line lineLeft">
                   <div class="lineImgContent">
-                      <img class="lineImgLine2" src="./img/4-光线1-1.png">
                       <img class="lineImg2" src="./img/4-光点1-2.png" />
                   </div>
               </div>
               <div class="line lineRight">
                   <div class="lineImgContent">
-                      <img class="lineImgLine3" src="./img/4-光线1-1.png">
                       <img class="lineImg3" src="./img/4-光点1-2.png" />
                   </div>
               </div>
           </div>
         </div>
       </div>
+      <!-- 线条运动end -->
     </section>
-    <!-- 线条运动结束 -->
+    <!-- 内容区域end -->
 
+    <!-- 底部start -->
     <footer class="footer d-flex justify-center align-center">
       <div class="footer_text">
         <span>©1995-2021</span>
@@ -80,15 +83,22 @@
       </div>
       <img class="footer_icon" src="./img/1-国徽.png">
     </footer>
+    <!-- 底部end -->
   </div>
+
+  <!-- 移动端提示start -->
   <div class="tip">
     <img class="tip_img" src="./img/6-X.png">
     <p style="color: #fff;">请将手机旋转至横屏观看效果更佳</p>
   </div>
+  <!-- 移动端提示end -->
+
+  <!-- 模态框start -->
   <div id="MyDiv" class="white_content">
     <div style="text-align: right; cursor: default;">
-     <div class="icon_close" onclick="CloseDiv('MyDiv','fade')">
-    <img src="./img/6-X.png"></div>
+      <div class="icon_close" onclick="CloseDiv('MyDiv','fade')">
+        <img src="./img/6-X.png">
+      </div>
     </div>
     <div class="dialog">
       <h1>下载详情参数</h1>
@@ -102,8 +112,9 @@
       <div class="sbumitBox">
         <button class="sbumit">提交</button>
       </div>
-   </div>
-    <!-- built files will be auto injected -->
+    </div>
+  </div>
+  <!-- 模态框end -->
 </body>
 
 </html>
