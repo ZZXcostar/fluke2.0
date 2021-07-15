@@ -1,4 +1,54 @@
     function init(isPCFlag){
+        // 背景图动画
+        function backgroundAnimation(){
+            var pageBody = $('#pageBody');
+            var x = 10;
+            var flag = true;
+            var currentIndex = 0;
+            var bgImgs = ["./../img/背景-7.jpg","./../img/背景-6.jpg","./../img/背景-5.jpg","./../img/背景-4.jpg","./../img/背景-3.jpg","./../img/背景-2.jpg","./../img/背景-1.jpg"];
+            function polling() {
+                if(flag){
+                    x -= 10;
+                    pageBody.animate({
+                        'background-position-x': x+'%',
+                    }, 3000, 'linear');
+                    flag = false
+                    changeImage()
+                }else{
+                    x += 10;
+                    pageBody.animate({
+                        'background-position-x': x+'%',
+                    }, 3000, 'linear');
+                    flag = true
+                    changeImage()
+                }
+                setTimeout(polling,3000)
+            }
+            polling();
+            function changeImage() {
+                if (currentIndex >= bgImgs.length){
+                    currentIndex = 0;
+                }else{
+                    pageBody.css('background-image', 'url(' + bgImgs[currentIndex] + ')');
+                    currentIndex += 1;
+                }
+            }
+            // var currentIndex = 0;
+            // function changeImage(){
+                
+            //     var bgImgs = ["voice-right-1.png","voice-right-2.png","voice-right-3.png"];
+            //     if (currentIndex >= bgImgs.length){
+            //       currentIndex = 0;
+            //     }else{
+            //        $('.cover_right').css('background-image', 'url(' + bgImgs[currentIndex] + ')');
+            //        currentIndex += 1;
+            //     }
+            // }
+            // setInterval(changeImage ,200)
+        }
+        // backgroundAnimation()
+
+        // 三角光点 光线动画
         function goamian(){
             $(".lineRight").fadeIn()
             $(".lineImg3").addClass("intro");
@@ -65,7 +115,7 @@
             }, 3500);
             
         }
-        goamian()
+        // goamian()
 
         $(".email").bind("input propertychange",function () {
             if(!isEmail($(".email").val())) {

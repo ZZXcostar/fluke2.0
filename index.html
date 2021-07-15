@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <div class="content">
+  <div id="content">
     <!-- 头部信息start -->
     <header class="header d-flex justify-between align-center">
       <div class="header_left d-flex align-center">
@@ -29,13 +29,13 @@
       </div>
       <div class="header_right d-flex align-center justify-between">
         <div class="headerText">全国热线: 400-800-3435</div>
-        <div onclick="ShowDiv('MyDiv','fade')" class="headerHerf">下载详细参数</div>
+        <img src="./img/12-按钮.png" onclick="ShowDiv('MyDiv','fade')"  class="headerHerf">
       </div>
     </header>
     <!-- 头部信息end -->
 
     <!-- 内容区域start -->
-    <section class="pageBody">
+    <section id="pageBody">
       <!-- 渐入动画start -->
 
       <!-- 渐入动画end -->
@@ -131,105 +131,93 @@
     })
     function startPcActive(isPCFlag){
       $(".tip").hide()
-      $(".content").show()
-      $(".content").addClass('pcStyle')
-      // $(".content").removeClass('mobieStyle')
+      $("#content").show()
+      $(".header").addClass('pcHeaderStyle') 
+      $(".footer").css("min-height", "25px")
+      // $("#pageBody").css("padding-top", "64px")
+      $("#pageBody").css("height", "calc(100% - 25px)")
+      $("#content").addClass('pcStyle') 
       init(isPCFlag)
     }
     function startMobieActive(){
-      $(".content").addClass('pcStyle')
-      // $(".tip").show()
-      // $(".content").hide()
-      // setTimeout(function () {
-      //   $(".tip").hide()
-      //   $(".content").show("normal", init(isPCFlag))
-      // }, 3000);
+      $("#content").addClass('mobieStyle')
+      $(".header").css("height", "6%")
+      $(".footer").css("height", "4%")
+      $("#pageBody").css("height", "90%")
     }
     // 浏览器中看到屏幕旋转带来样式
     (function(){
-    let active = 0;
-    let isPCFlag = isPC()
-    if(isPCFlag) return
-    var supportOrientation = (typeof window.orientation === 'number' &&
-    typeof window.onorientationchange === 'object');
-    var init1 = function(){
-    var htmlNode = document.body.parentNode,
-    orientation;
-    var updateOrientation = function(){
-    if(supportOrientation){
-    orientation = window.orientation;
-    switch(orientation){
-    case 90:
-    case -90:
-    orientation = 'landscape';
-    break;
-    default:
-    orientation = 'portrait';
-    break;
-    }
-    }else{
-    orientation = (window.innerWidth > window.innerHeight) ? 'landscape' : 'portrait';
-    }
-    // htmlNode.setAttribute('class',orientation);
-      if(orientation == 'landscape'){
-        // $(".tip").hide()
-        // $(".content").show("normal", init(isPCFlag))
-        active ++
-        if(active < 2){
-          init(isPCFlag)
+      let active = 0;
+      let isPCFlag = isPC()
+      if(isPCFlag) return
+      var supportOrientation = (typeof window.orientation === 'number' &&
+      typeof window.onorientationchange === 'object');
+      var init1 = function(){
+        var htmlNode = document.body.parentNode,
+        orientation;
+        var updateOrientation = function(){
+          if(supportOrientation){
+            orientation = window.orientation;
+            switch(orientation){
+              case 90:
+              case -90:
+              orientation = 'landscape';
+              break;
+              default:
+              orientation = 'portrait';
+              break;
+            }
+          }else{
+            orientation = (window.innerWidth > window.innerHeight) ? 'landscape' : 'portrait';
+          }
+          // htmlNode.setAttribute('class',orientation);
+          if(orientation == 'landscape'){
+            // $(".tip").hide()
+            // $("#content").show("normal", init(isPCFlag))
+            active ++
+            if(active < 2){
+              init(isPCFlag)
+            }
+          }else{
+            // stopInit()
+            $('#content').stop()
+            // $(".tip").show()
+            // $("#content").hide()
+          }
+        };
+        if(supportOrientation){
+          window.addEventListener('orientationchange',updateOrientation,false);
+        }else{
+          //监听resize事件
+          window.addEventListener('resize',updateOrientation,false);
         }
-      }else{
-        // stopInit()
-        $('.content').stop()
-        // $(".tip").show()
-        // $(".content").hide()
-      }
-    };
-    if(supportOrientation){
-    window.addEventListener('orientationchange',updateOrientation,false);
-    }else{
-    //监听resize事件
-    window.addEventListener('resize',updateOrientation,false);
-    }
-    updateOrientation();
-    };
-    window.addEventListener('DOMContentLoaded',init1,false);
+        updateOrientation();
+      };
+      window.addEventListener('DOMContentLoaded',init1,false);
   })();
 </script>
 <script>
 
 </script>
 <style>
-   img{
-     /* width: 100%;
-     height: 100%; */
-   }
-  body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  }
   .pcStyle{
+    min-width: 1280px;
+    min-height: 680px;
+    height: 100%;
+  }
+  .pcHeaderStyle{
+    min-width: 1280px;
+    min-height: 48px;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+  }
+  .mobieStyle{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-  }
-  .mobieStyle{
-    position: fixed;
-    width: 100vh;
-    height: 100vw;
-    top: 0;
-    left: 100vw;
-    /* top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh; */
-    /* -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    transform-origin: 0% 0%; */
+    display: none;
+    position: absolute;
   }
   .tip{
     /* display: none; */
@@ -255,17 +243,12 @@
     text-align: center;
     line-height: 0.6rem;
    }
-  .content {
-    display: none;
-    position: absolute;
-  }
-  
   @media screen and (orientation: portrait){
     .tip{
       display: flex !important;
       }
-    .content{
-      display: none !important;
+    #content{
+     display: none !important;
     }
    
   }
@@ -274,7 +257,7 @@
     .tip{
       display: none !important;
     }
-    .content{
+    #content{
       display: block !important;
     }
   } 
@@ -284,13 +267,13 @@
     .tip{
 	 display: block;
 	}
-	.content{
+	#content{
 	 display:none;
 	}
     body{
 	  position: fixed;
 	}
-    .content {
+    #content {
       position: absolute;
        width: 100vh;
       height: 100vw;
@@ -304,7 +287,7 @@
     body{
 	  position: fixed;
 	}
-    .content {
+    #content {
       position: absolute;
       top: 0;
       left: 0;

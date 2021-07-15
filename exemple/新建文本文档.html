@@ -92,30 +92,30 @@
         }, 3000, 'linear');
 		flag = true
 		}
-        setTimeout(polling,50)
+        setTimeout(polling,3000)
     }
     polling();
 	
-	var cover1 = $('.cover1');
-    var y = 50;
-	var flag1 = true
-    function polling1() {
-		if(flag){
-            y += 50;
-            cover1.animate({
-                'background-position-y': y+'%',
-            }, 3000, 'linear');
-            flag1 = false
-		}else{
-            y -= 50;
-            cover1.animate({
-                'background-position-y': y+'%',
-            }, 3000, 'linear');
-            flag1 = true
-		}
-        setTimeout(polling1,50)
-    }
-    polling1();
+	// var cover1 = $('.cover1');
+    // var y = 50;
+	// var flag1 = true
+    // function polling1() {
+	// 	if(flag){
+    //         y += 50;
+    //         cover1.animate({
+    //             'background-position-y': y+'%',
+    //         }, 3000, 'linear');
+    //         flag1 = false
+	// 	}else{
+    //         y -= 50;
+    //         cover1.animate({
+    //             'background-position-y': y+'%',
+    //         }, 3000, 'linear');
+    //         flag1 = true
+	// 	}
+    //     setTimeout(polling1,50)
+    // }
+    // polling1();
     setTimeout(()=>{
         $('.cover_left').animate({
             'width': '50%',
