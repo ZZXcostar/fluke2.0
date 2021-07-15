@@ -11,28 +11,28 @@
                     x -= 10;
                     pageBody.animate({
                         'background-position-x': x+'%',
-                    }, 3000, 'linear');
+                    }, 2000, 'linear');
                     flag = false
-                    changeImage()
+                   // changeImage()
                 }else{
                     x += 10;
                     pageBody.animate({
                         'background-position-x': x+'%',
-                    }, 3000, 'linear');
+                    }, 2000, 'linear');
                     flag = true
-                    changeImage()
+                    //changeImage()
                 }
-                setTimeout(polling,3000)
+                setTimeout(polling,2000)
             }
             polling();
-            function changeImage() {
-                if (currentIndex >= bgImgs.length){
-                    currentIndex = 0;
-                }else{
-                    pageBody.css('background-image', 'url(' + bgImgs[currentIndex] + ')');
-                    currentIndex += 1;
-                }
-            }
+            // function changeImage() {
+            //     if (currentIndex > bgImgs.length){
+            //         currentIndex = 0;
+            //     }else{
+            //         pageBody.css('background-image', 'url(' + bgImgs[currentIndex] + ')');
+            //         currentIndex += 1;
+            //     }
+            // }
             // var currentIndex = 0;
             // function changeImage(){
                 
@@ -50,72 +50,82 @@
 
         // 三角光点 光线动画
         function goamian(){
-            $(".lineRight").fadeIn()
-            $(".lineImg3").addClass("intro");
-            $('.lineImg3').animate({left:'83%',opacity: '0'},1000,setblack1);
-            setTimeout(() => {
-                $(".lineTop").fadeIn()
+            let css = {left:'83%',opacity: '0'};
+            let interval = null
+            clearInterval(interval)
+            interval = setInterval(function(){ // 这里要改成回调 定时器有性能问题
                 $(".lineImg1").addClass("intro");
-                $('.lineImg1').animate({left:'83%',opacity: '0'},1000,setblack2);
-                $('.lineImg1').css('left', '0%')
-            }, 1000);
-            setTimeout(() => {
-                $(".lineLeft").fadeIn()
                 $(".lineImg2").addClass("intro");
-                $('.lineImg2').animate({left:'83%',opacity: '0'},1000,setblack3);
-                $('.lineImg2').css('left', '0%')
-            }, 2000);
-        
-            function setblack1(){
-                $('.lineImg3').css('left', '0%')
-                $('.lineImg3').removeClass('intro')
-            }
-            function setblack2(){
-                $('.lineImg1').css('left', '0%')
-                $('.lineImg1').removeClass('intro')
-            }
-            function setblack3(){
-                $('.lineImg2').css('left', '0%')
-                $('.lineImg2').removeClass('intro')
-            }
-            setTimeout(() => {
-                let css = {left:'83%'};
-                let interval = null
-                clearInterval(interval)
-                interval = setInterval(function(){ // 这里要改成回调 定时器有性能问题
-                    $(".lineImg1").addClass("intro");
-                    $(".lineImg2").addClass("intro");
-                    $(".lineImg3").addClass("intro");
-        
-                    $('.lineImg1').animate(css,1000,rowBack1);
-                    $('.lineImg2').animate(css,1000,rowBack2);
-                    $('.lineImg3').animate(css,1000,rowBack3);
-                },0);
-                function rowBack1(){
-                    if(css.left==='83%'){
-                        $('.lineImg1').css('left', '0%')
-                        $(".lineImg1").removeClass("intro");
-                        // $('.lineImg1').fadeOut()
-                    }
+                $(".lineImg3").addClass("intro");
+    
+                $('.lineImg1').animate(css,1000,rowBack1);
+                $('.lineImg2').animate(css,1000,rowBack2);
+                $('.lineImg3').animate(css,1000,rowBack3);
+            },0);
+            function rowBack1(){
+                if(css.left==='83%'){
+                    $('.lineImg1').css('left', '0%')
+                    $(".lineImg1").removeClass("intro");
+                    // $('.lineImg1').fadeOut()
                 }
-                function rowBack2(){
-                    if(css.left==='83%'){
-                        $('.lineImg2').css('left', '0%')
-                        $(".lineImg2").removeClass("intro");
-                        // $('.lineImg2').fadeOut()
-                    }
+            }
+            function rowBack2(){
+                if(css.left==='83%'){
+                    $('.lineImg2').css('left', '0%')
+                    $(".lineImg2").removeClass("intro");
+                    // $('.lineImg2').fadeOut()
                 }
-                function rowBack3(){
-                    if(css.left==='83%'){
-                        $('.lineImg3').css('left', '0%')
-                        $(".lineImg3").removeClass("intro");
-                        // $('.lineImg3').fadeOut()
-                    }
+            }
+            function rowBack3(){
+                if(css.left==='83%'){
+                    $('.lineImg3').css('left', '0%')
+                    $(".lineImg3").removeClass("intro");
+                    // $('.lineImg3').fadeOut()
                 }
-            }, 3500);
+            }
+            $('.lineImg1').animate({top: '-14px',height: '24px'},0)
+            $('.lineImg2').animate({top: '-14px',height: '24px'},0)
+            $('.lineImg3').animate({top: '-14px',height: '24px'},0)
+            $('.secondAnimation').css('position','absolute')
+            $('.secondAnimation').animate({left: '45%'},1000)
+            $('.triangle_content').animate({width: '100px',height: '70px'},1000,showLight);
             
+            function showLight(){
+                $('.secondAnimation').fadeOut()
+                $('.thirdAnimation').fadeIn()
+                setTimeout(()=>{
+                  $('.thirdAnimation').fadeOut(0, showProduct)
+                },500)
+            }
+            function showProduct(){
+                $('.fourthAnimation').fadeIn()
+                $('.fourthAnimation').css('display','flex')
+                $('.product').animate({width: '500px',height: '500px'},1000)
+                $('.productImg1').animate({width: '100%',height: '100%',top: '9%',left: '0%'},1000, hideLight)
+            }
+            function hideLight(){
+                $('.lightImg2').fadeOut()
+                // $('.productImg1').css('position','inherit')
+                // $('.productImg1').fadeOut(100,()=>{
+                //     $('.productImg2').fadeIn()
+                // })
+                $('.productImg2').fadeIn(100,showProductDesc)
+
+            }
+           function showProductDesc(){
+                $('.product_content').animate({
+                    'width': '50%',
+                }, 1000, 'linear');
+                $('.product_desc').animate({
+                    'width': '50%',
+                }, 1000, 'linear',()=>{
+                    $('.product_desc').animate({
+                        'opacity': '1'
+                    }, 1000, 'linear');
+                });
+            }
         }
-        // goamian()
+        goamian()
 
         $(".email").bind("input propertychange",function () {
             if(!isEmail($(".email").val())) {

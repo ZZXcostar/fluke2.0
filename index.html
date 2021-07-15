@@ -13,8 +13,9 @@
     <meta name="viewport" content="initial-scale=0.3333333333,maximum-scale=0.3333333333,minimum-scale=0.3333333333,user-scalable=no">
     <title>福禄克</title>
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/triangle.css">
+    <link rel="stylesheet" type="text/css" href="./css/displacement.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="./js/jq.min.js"></script>
     <script src="./js/rem.js"></script>
     <script src="./js/utils.js"></script>
@@ -35,7 +36,7 @@
     <!-- 头部信息end -->
 
     <!-- 内容区域start -->
-    <section id="pageBody">
+    <section id="pageBody" style="background-image: url('./img/背景-1.jpg');">
       <!-- 渐入动画start -->
 
       <!-- 渐入动画end -->
@@ -64,6 +65,36 @@
         </div>
       </div>
       <!-- 线条运动end -->
+      <!-- 光点运动start -->
+      <div class="thirdAnimation">
+        <div class="light_content">
+          <div class="light">
+            <img class="lightImg1" src="./img/6-光线.png" />
+          </div>
+        </div>
+      </div>
+      <!-- 光点运动end -->
+
+      <!-- 商品图片、光运动start -->
+      <div class="fourthAnimation">
+        <div class="product_content">
+          <div class="product">
+            <img class="productImg1" src="./img/8-产品1（无光源）.png">
+            <img class="productImg2" src="./img/8-产品1（发光+倒影）.png">
+            <img class="lightImg2" src="./img/7-大光线.png" />
+          </div>
+        </div>
+        <!-- 商品描述start -->
+        <div class="product_desc">
+          <div class="product_desc_top">
+            <img class="product_desc_top_img1" src="./img/11-标题.png">
+            <img class="product_desc_top_img2" src="./img/11-副标题.png">
+          </div>
+        </div>
+        <!-- 商品描述end -->
+        <div></div>
+      </div>
+      <!-- 商品图片、光运动end -->
     </section>
     <!-- 内容区域end -->
 
@@ -125,17 +156,20 @@
       console.log(isPCFlag)
       if(isPCFlag){
         startPcActive(isPCFlag)
+        // loadjscssfile("do.js","js");
       }else{
         startMobieActive()
+        // 判断是否在手机中加载不同的样式
+        loadjscssfile("./css/phone.css","css");
       }
     })
     function startPcActive(isPCFlag){
       $(".tip").hide()
       $("#content").show()
       $(".header").addClass('pcHeaderStyle') 
-      $(".footer").css("min-height", "25px")
-      // $("#pageBody").css("padding-top", "64px")
-      $("#pageBody").css("height", "calc(100% - 25px)")
+      $(".footer").css("min-height", "30px")
+      $("#pageBody").css("padding-top", "40px")
+      $("#pageBody").css("height", "calc(100% - 30px - 41px)")
       $("#content").addClass('pcStyle') 
       init(isPCFlag)
     }
@@ -207,7 +241,7 @@
   }
   .pcHeaderStyle{
     min-width: 1280px;
-    min-height: 48px;
+    min-height: 40px;
     position: absolute;
     z-index: 200;
     top: 0;
