@@ -5,7 +5,7 @@
             var x = 10;
             var flag = true;
             var currentIndex = 0;
-            var bgImgs = ["./../img/背景-7.jpg","./../img/背景-6.jpg","./../img/背景-5.jpg","./../img/背景-4.jpg","./../img/背景-3.jpg","./../img/背景-2.jpg","./../img/背景-1.jpg"];
+            var bgImgs = ["./img/背景-7.jpg","./img/背景-6.jpg","./img/背景-5.jpg","./img/背景-4.jpg","./img/背景-3.jpg","./img/背景-2.jpg","./../img/背景-1.jpg"];
             function polling() {
                 if(flag){
                     x -= 10;
@@ -46,7 +46,7 @@
             // }
             // setInterval(changeImage ,200)
         }
-        // backgroundAnimation()
+        backgroundAnimation()
 
         // 三角光点 光线动画
         function goamian(){
