@@ -1,150 +1,4 @@
     function init(isPCFlag){
-        $(function(){
-        $(".an1Title").animate({
-                left:"16%",
-                top:"-130%",
-                fontSize: '.19rem'
-            },2000,'swing',cnOver);
-        
-        $(".an1Title .cn").animate({
-            fontSize: '12px'
-        },1000);
-        setTimeout(()=>{
-            $(".an1Title .cn").fadeOut()
-        },1000)
-        function cnOver() {
-            $(".bg1").fadeOut()
-            setTimeout(function(){
-                setTimeout(()=>{
-                    $(".img2box img").eq(0).fadeIn({duration: 100});
-                },0)
-                setTimeout(()=>{
-                    $(".img2box img").eq(1).fadeIn({duration: 100});
-                },250)
-                setTimeout(()=>{
-                    $(".img2box img").eq(2).fadeIn({duration: 100});
-                },500)
-                setTimeout(()=>{
-                    $(".img2box img").eq(3).fadeIn({duration: 100});
-                },750)
-                setTimeout(()=>{
-                    $(".img2box img").eq(4).fadeIn({duration: 100});
-                },1000)
-                setTimeout(()=>{
-                    $(".img2box img").eq(5).fadeIn({duration: 100});
-                },1250)
-                setTimeout(()=>{
-                    $(".img2box img").eq(6).fadeIn({duration: 100});
-                },1500)
-                setTimeout(()=>{
-                    $(".img2box img").eq(7).fadeIn({duration: 100});
-                },1750)
-                setTimeout(()=>{
-                    $(".img2box img").eq(8).fadeIn({duration: 100});
-                },2000)
-                setTimeout(()=>{
-                    $(".img2box img").eq(9).fadeIn({duration: 100});
-                },50)
-                $(".an2Title").show()
-                $(".an2Title").animate({
-                    right:"-=32%",
-                    top:"-=30%",
-                    fontSize: '.14rem'
-                },2000);
-                
-                $(".an2Title .cn").animate({
-                    fontSize: '12px'
-                },1000);
-                setTimeout(()=>{
-                $(".an2Title .cn").fadeOut()
-                },1000)
-                setTimeout(()=>{
-                cnver2()
-                },2000)
-                
-            },200);
-            
-        }
-        setTimeout(()=>{
-            $(".img1").fadeOut({duration: 500})
-            $(".img2").fadeIn({duration: 500})
-        },500)
-        setTimeout(()=>{
-            $(".img1").fadeOut({duration: 500})
-            $(".img2").fadeIn({duration: 500})
-        },1000)
-        setTimeout(()=>{
-            $(".img1").fadeIn({duration: 1000})
-            $(".img2").fadeOut({duration: 1000})
-        },1500)
-        setTimeout(()=>{
-            $(".img1").fadeIn({duration: 2000})
-        },2000)
-        })
-        function cnver2() {
-            $(".img2box").fadeOut()
-            setTimeout(function(){
-                $(".an3Title").show()
-                $(".an3Title").animate({
-                    top:"85%",
-                    right:"45%",
-                    fontSize: '.14rem'
-                },2000);
-                setTimeout(()=>{
-                $(".an3Title .cn").fadeOut()
-                },1000)
-                $(".an3Title .cn").animate({
-                    fontSize: '12px'
-                },1000);
-                setTimeout(()=>{
-                cnver3()
-                },2000)
-                
-            $(".img3box div").eq(0).animate({
-                left:"-40%",
-            },500,'swing')
-            $(".img3box div").eq(1).animate({
-                left:"-60%",
-            },1500,'swing')
-            $(".img3box div").eq(2).animate({
-                left:"-60%",
-            },1600,'swing')
-            $(".img3box div").eq(3).animate({
-                left:"-67%",
-            },800,'swing')
-            $(".img3box div").eq(4).animate({
-                left:"-80%",
-            },1000,'swing')
-            $(".img3box div").eq(5).animate({
-                left:"-30%",
-            },2000,'swing')
-            $(".img3box div").eq(6).animate({
-                left:"-20%",
-            },600,'swing')
-            $(".img3box div").eq(7).animate({
-                left:"-40%",
-            },700,'swing')
-            $(".img3box div").eq(8).animate({
-                left:"-16%",
-            },1200,'swing')
-            },200);
-        }
-        function cnver3() {
-            $(".img3box").fadeOut()
-            goamian()
-            // $(".bg1").fadeOut()
-            
-        }
-        $(".meritBox li").mouseover(function(){
-            $(".meritBox .imgText").hide();
-            // $(".meritBox .imgbox").css({top:"0px"});
-            $(this).find(".imgText").show();
-            $(this).find(".imgbox").animate({top:"-20px"},100);
-        });
-        $(".meritBox li").mouseleave(function(){
-            $(".meritBox .imgbox").animate({top:"0px"},100);
-        });
-        
         function goamian(){
             $(".lineRight").fadeIn()
             $(".lineImg3").addClass("intro");
@@ -178,10 +32,6 @@
                 $('.lineImg2').removeClass('intro')
             }
             setTimeout(() => {
-                $(".product1_left").fadeIn(2000)
-                $(".product1_center").fadeIn(2000)
-                $(".product1_right").fadeIn(2000)
-                $(".product_dec").fadeIn(2000)
                 let css = {left:'83%'};
                 let interval = null
                 clearInterval(interval)
@@ -215,61 +65,11 @@
                         // $('.lineImg3').fadeOut()
                     }
                 }
-                setTimeout(()=>{
-                    $(".product_title").animate({
-                        opacity: "1",
-                    },2000);
-                    $(".bottomBox").animate({
-                        opacity: "1",
-                    },2000);
-                },3000)
-                setTimeout(()=>{
-                    $(".product_title").animate({
-                        height :"0",
-                        opacity: "0",
-                        fontSize: "0.06rem"
-                    },2000);
-                    $(".product_title").fadeOut(2000)
-                    $(".meritBox li .imgText").eq(0).fadeIn(2000);
-                    $(".an1Title").animate({
-                        top:"-181%",
-                        left: "18%",
-                        fontSize: '.12rem'
-                    },2000);
-                    $(".an2Title").animate({
-                        right: "-3.2534%",
-                        top: "-121.0109%",
-                        fontSize: '.10rem'
-                    },2000);
-                    $(".an3Title").animate({
-                        top:"64%",
-                        right: "45.6%",
-                        fontSize: '.10rem'
-                    },2000);
-                    $(".meritBox").animate({
-                        marginTop:"0.2rem",
-                    },2000);
-                    $(".product_dec").animate({
-                        marginTop:"0.1rem",
-                    },2000);
-                },5000)
             }, 3500);
             
         }
-        // $(".email").blur(function(){
-        //     if(!isEmail($(".email").val())) {
-        //         $(".email").next(".verification").show()
-        //     }else {
-        //         $(".email").next(".verification").hide()
-        //     }
-        // })
-        // $(".phone").blur(function(){
-        //     if(!isCellphone($(".phone").val())) {
-        //         $(".phone").next(".verification").show()
-        //     }else {
-        //         $(".phone").next(".verification").hide()
-        //     }
-        // })
+        goamian()
+        
         $(".email").bind("input propertychange",function () {
             if(!isEmail($(".email").val())) {
                 $(".email").next(".verification").show()

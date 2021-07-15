@@ -7,98 +7,11 @@
   align-items: center;
   justify-content: flex-start;
 }
-.pageCenter .forCenter{
+.pageCenter .secondAnimation{
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
-}
-.product_title{
-  width: 100%;
-  height: 12%;
-  line-height: 0.2rem;
-  color: #fabe0e;
-  font-size: 0.16rem;
-  text-align: center;
-  opacity: 0;
-}
-/* 所有设备、宽度必须大于800或者竖屏的时候，true */
-/* @media all and (min-width:300px),(orientation:portrait){
-  .product_title{
-    font-size: 20px;
-  }
-} */
-/* @media only screen and (max-width: 1200px) {
-  .product_title{
-    font-size: 26px;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  .product_title{
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .product_title{
-    font-size: 22px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .product_title{
-    font-size: 20px;
-  }
-} */
-.product_title .product_title_top:nth-child(3){
-  letter-spacing: 0.02rem;
-}
-.product_title .product_title_bottom{
-  letter-spacing: 0.02rem;
-}
-.pageCenter .product_dec{
-  display: none;
-  color: #fff;
-  font-size: 0.08rem;
-  text-align: center;
-  letter-spacing: 0.01rem;
-  margin-top: 0.15rem;
-}
-.pageCenter .product1_left{
-  display: none;
-  position: absolute;
-  top: 0.1rem;
-  left: -2.2rem;
-  height: 0.6rem;
-  opacity: 0.2;
-}
-.pageCenter .product1_left img{
-  height: 100%;
-}
-.pageCenter .product1_center{
-  display: none;
-  position: absolute;
-  top: 0.3rem;
-  left: 0.45rem;
-  height: 1rem;
-  opacity: 0.9;
-}
-.product1_center_big{
-  top: 0.34rem !important;
-  left: 0.5rem !important;
-  height: 1.15rem !important;
-}
-.pageCenter .product1_center img{
-  height: 100%;
-}
-.pageCenter .product1_right{
-  display: none;
-  position: absolute;
-  top: 0.8rem;
-  right: -2.5rem;
-  height: 0.9rem;
-  opacity: 0.2;
-}
-.pageCenter .product1_right img{
-  height: 100%;
 }
 .pageCenter .triangle_content{
   /* width: 33%;
