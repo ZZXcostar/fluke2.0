@@ -1,5 +1,136 @@
     function init(isPCFlag){
-        // 背景图动画
+        $(".meritBox li").mouseover(function(){
+            $(".contentText .imgText").hide();
+            // $(".meritBox .imgbox").css({top:"0px"});
+            // $(this).find(".imgText").show();
+            console.log()
+            $(".contentText .imgText").eq($(this).index()).show()
+            $(this).find(".imgbox").animate({top:"-20px"},100);
+        });
+        $(".meritBox li").mouseleave(function(){
+            $(".meritBox .imgbox").animate({top:"0px"},100);
+        });
+        $(".ocvBox").animate({
+            left:"0%",
+            top:"10%",
+        },2000,'swing',ACRanmiate);
+        $(".ocvBox .ocvTitle").animate({
+            fontSize: '36px'
+        },1000);
+        $(".ocvBox .cn").animate({
+            fontSize: '12px'
+        },1000);
+        setTimeout(()=>{
+            $(".ocvBox .cn").fadeOut()
+        },1000)
+        setTimeout(()=>{
+            $(".ocvAnimationImg").fadeOut({duration: 500})
+            $(".ocvAnimationImg1").fadeIn({duration: 500})
+        },500)
+        setTimeout(()=>{
+            $(".ocvAnimationImg").fadeOut({duration: 500})
+            $(".ocvAnimationImg1").fadeIn({duration: 500})
+        },1000)
+        setTimeout(()=>{
+            $(".ocvAnimationImg").fadeIn({duration: 1000})
+            $(".ocvAnimationImg1").fadeOut({duration: 1000})
+        },1500)
+        setTimeout(()=>{
+            $(".ocvAnimationImg").fadeIn({duration: 2000})
+        },2000)
+        function ACRanmiate() {
+            $(".ocvAnimation").fadeOut()
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(0).fadeIn({duration: 100});
+            },0)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(1).fadeIn({duration: 100});
+            },250)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(2).fadeIn({duration: 100});
+            },500)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(3).fadeIn({duration: 100});
+            },750)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(4).fadeIn({duration: 100});
+            },1000)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(5).fadeIn({duration: 100});
+            },1250)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(6).fadeIn({duration: 100});
+            },1500)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(7).fadeIn({duration: 100});
+            },1750)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(8).fadeIn({duration: 100});
+            },2000)
+            setTimeout(()=>{
+                $(".arcAnimation img").eq(9).fadeIn({duration: 100});
+            },50)
+            $(".arcBox").show()
+            $(".arcBox").animate({
+                left:"100%",
+                top:"10%",
+            },2000,'swing',switchanmiate);
+            $(".arcBox .arcTitle").animate({
+                fontSize: '36px'
+            },1000);
+            $(".arcBox .cn").animate({
+                fontSize: '12px'
+            },1000);
+            setTimeout(()=>{
+                $(".arcBox .cn").fadeOut()
+            },1000)
+        }
+        function switchanmiate() {
+            $(".arcAnimation").fadeOut()
+            $(".switchBox").show()
+            $(".switchBox").animate({
+                // left:"100%",
+                top:"98%",
+            },2000,'swing');
+            $(".switchBox .switchTitle").animate({
+                fontSize: '36px'
+            },1000);
+            $(".switchBox .cn").animate({
+                fontSize: '12px'
+            },1000);
+            setTimeout(()=>{
+                $(".switchBox .cn").fadeOut()
+            },1000)
+            $(".switchAnimation div").eq(0).animate({
+                left:"-140%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(1).animate({
+                left:"-160%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(2).animate({
+                left:"-160%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(3).animate({
+                left:"-167%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(4).animate({
+                left:"-180%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(5).animate({
+                left:"-130%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(6).animate({
+                left:"-120%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(7).animate({
+                left:"-140%",
+            },2000,'swing')
+            $(".switchAnimation div").eq(8).animate({
+                left:"-116%",
+            },2000,'swing',goamian)
+        }
+        
+    //     // 背景图动画
         function backgroundAnimation(){
             var pageBody = $('#pageBody');
             var x = 10;
@@ -50,6 +181,7 @@
 
         // 三角光点 光线动画
         function goamian(){
+            $(".triangle").fadeIn()
             let css = {left:'83%',opacity: '0'};
             let interval = null
             clearInterval(interval)
@@ -86,6 +218,15 @@
             $('.lineImg1').animate({top: '-14px',height: '24px'},0)
             $('.lineImg2').animate({top: '-14px',height: '24px'},0)
             $('.lineImg3').animate({top: '-14px',height: '24px'},0)
+            $(".ocvBox .ocvTitle").animate({
+                fontSize: '12px'
+            },1000);
+            $(".arcBox .arcTitle").animate({
+                fontSize: '12px'
+            },1000);
+            $(".switchBox .switchTitle").animate({
+                fontSize: '12px'
+            },1000);
             $('.secondAnimation').css('position','absolute')
             $('.secondAnimation').animate({left: '45%'},1000)
             $('.triangle_content').animate({width: '100px',height: '70px'},1000,showLight);
@@ -113,6 +254,7 @@
 
             }
            function showProductDesc(){
+               
                 $('.product_content').animate({
                     'width': '50%',
                 }, 1000, 'linear');
@@ -121,11 +263,16 @@
                 }, 1000, 'linear',()=>{
                     $('.product_desc').animate({
                         'opacity': '1'
-                    }, 1000, 'linear');
+                    }, 1000, 'linear',()=>{
+                        // setTimeout(()=>{
+                            $(".contentText .imgText").eq(0).fadeIn(1000)
+                            $(".setbutton").fadeIn(1000)
+                        // },00)
+                    });
                 });
             }
         }
-        goamian()
+        // goamian()
 
         $(".email").bind("input propertychange",function () {
             if(!isEmail($(".email").val())) {
@@ -199,4 +346,5 @@
         var pattern = /^([a-zA-Z0-9]+[-_.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[-_.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,6}$/;
         return str?pattern.test(str):true;
     }
+    
        

@@ -89,8 +89,8 @@ body {
     display: none;
     position: absolute;
     border-radius: 20px;
-    top: 20%;
-    left: 1.6rem;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%); 
     width: 4rem;
     height: 2.2rem;
     background-color: white;
