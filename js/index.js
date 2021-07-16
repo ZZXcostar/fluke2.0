@@ -105,7 +105,7 @@
             }
             function hideLight(){
                 $('.lightImg2').fadeOut()
-                // $('.productImg1').css('position','inherit')
+                $('.productImg1').css('background-image',"url('./img/8-产品1（无光源+倒影）.png')")
                 // $('.productImg1').fadeOut(100,()=>{
                 //     $('.productImg2').fadeIn()
                 // })
