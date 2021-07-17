@@ -47,12 +47,12 @@
   position: absolute;
   width: 86%;
   height: 1px;
-  box-shadow: 0px 0px 10px 1px rgba(41, 54, 129,0.7);
+  /* box-shadow: 0px 0px 10px 1px rgba(41, 54, 129,0.7);
   background:linear-gradient(
     -200deg,
      rgba(255,255,255,0.00) 0%,
      rgb(41, 54, 129) 53%, 
-     rgba(255,255,255,0.00) 99%)
+     rgba(255,255,255,0.00) 99%) */
 }
 .line:nth-child(2){
   transform: rotate(125deg);
