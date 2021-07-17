@@ -3,7 +3,6 @@
             $(".contentText .imgText").hide();
             // $(".meritBox .imgbox").css({top:"0px"});
             // $(this).find(".imgText").show();
-            console.log()
             $(".contentText .imgText").eq($(this).index()).show()
             $(this).find(".imgbox").animate({top:"-20px"},100);
         });
@@ -13,16 +12,16 @@
         $(".ocvBox").animate({
             left:"0%",
             top:"10%",
-        },2000,'swing',ACRanmiate);
+        },2000,ACRanmiate);
         $(".ocvBox .ocvTitle").animate({
             fontSize: '36px'
-        },1000);
+        },2000);
         $(".ocvBox .cn").animate({
             fontSize: '12px'
-        },1000);
+        },2000);
         setTimeout(()=>{
             $(".ocvBox .cn").fadeOut()
-        },1000)
+        },2000)
         setTimeout(()=>{
             $(".ocvAnimationImg").fadeOut({duration: 500})
             $(".ocvAnimationImg1").fadeIn({duration: 500})
@@ -77,13 +76,13 @@
             },2000,'swing',switchanmiate);
             $(".arcBox .arcTitle").animate({
                 fontSize: '36px'
-            },1000);
+            },2000);
             $(".arcBox .cn").animate({
                 fontSize: '12px'
-            },1000);
+            },2000);
             setTimeout(()=>{
                 $(".arcBox .cn").fadeOut()
-            },1000)
+            },2000)
         }
         function switchanmiate() {
             $(".arcAnimation").fadeOut()
@@ -94,13 +93,13 @@
             },2000,'swing');
             $(".switchBox .switchTitle").animate({
                 fontSize: '36px'
-            },1000);
+            },2000);
             $(".switchBox .cn").animate({
                 fontSize: '12px'
-            },1000);
+            },2000);
             setTimeout(()=>{
                 $(".switchBox .cn").fadeOut()
-            },1000)
+            },2000)
             $(".switchAnimation div").eq(0).animate({
                 left:"-140%",
             },2000,'swing')

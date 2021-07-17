@@ -20,6 +20,7 @@
 }
 
 .ocvAnimation, .arcAnimation , .switchAnimation{
+    opacity: 0.2;
     overflow: hidden;
     width: 900px;
     height: 150px;
@@ -28,8 +29,8 @@
 }
 .switchAnimation{
     overflow: hidden;
-    width: 900px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     position: absolute; left: 50%; top: 50%;
     transform: translate(-50%, -50%); 
 }
@@ -125,21 +126,22 @@
 }
 .switchAnimation div img{
     width: 100px;
-    opacity: 0.2;
 }
 .switchAnimation div .omg{
     width: 50px;
 }
 .dscbottomBox {
-   padding-right:50px;
+
+   /* padding-right:50px; */
    height: 150px;
-   position: relative;
+   width: 570px;
+   /* position: relative; */
    overflow: hidden;
 }
 .dscbottomBox .meritBox{
-    /* display: flex; */
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    /* overflow: hidden; */
+    /* position: relative; */
 }
 .imgbox {
     position: relative;
@@ -147,11 +149,11 @@
    height: 100px;
 }
 .dscbottomBox .meritBox li{
-   /* flex: 1; */
-   height: 80px;
+   flex: 1;
+   height: 90px;
    padding-top: 20px;
-   float: left;
-   width: 73px;
+   /* float: left; */
+   /* width: 73px; */
    margin-right: 10px;
 }
 .meritBox li img{
@@ -180,4 +182,9 @@
 }
 .herfTitle {
     text-decoration: underline;
+}
+.setbuttonBox {
+    width: 570px;
+    text-align: center;
+    line-height: 20px;
 }
