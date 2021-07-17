@@ -227,7 +227,11 @@
                 fontSize: '12px'
             },1000);
             $('.secondAnimation').css('position','absolute')
-            $('.secondAnimation').animate({left: '45%'},1000)
+            if(isPCFlag){
+                $('.secondAnimation').animate({left: '45%'},1000)
+            }else{
+                $('.secondAnimation').animate({left: '47.7%',top: '47%'},1000)
+            }
             $('.triangle_content').animate({width: '100px',height: '70px'},1000,showLight);
             
             function showLight(){
@@ -240,8 +244,12 @@
             function showProduct(){
                 $('.fourthAnimation').fadeIn()
                 $('.fourthAnimation').css('display','flex')
-                $('.product').animate({width: '580px',height: '580px'},1000)
-                $('.productImg1').animate({width: '100%',height: '100%',top: '9%',left: '0%'},1000, hideLight)
+                if(isPCFlag){
+                    $('.product').animate({width: '580px',height: '580px'},1000)
+                }else{
+                    $('.product').animate({width: '3rem',height: '3rem'},1000)
+                }
+                $('.productImg1').animate({width: '100%',height: '100%',top: '46px',left: '0%'},1000, hideLight)
             }
             function hideLight(){
                 $('.lightImg2').fadeOut()

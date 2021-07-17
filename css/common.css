@@ -96,7 +96,7 @@ button {
 } */
 @font-face{
   font-family: 'fontLink';
-  src: url('./../static/font/Roboto-Regular.ttf');
+  src: url('./../static/fonts2.0/SourceHanSansCN-Light.otf');
 }
 body, html {
   height: 100%;
@@ -106,7 +106,7 @@ body {
   /* background-color: rgb(5, 4, 4); */
   /* font-family: helveticaneueltpro, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue",
     -apple-system, STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; */
-  font-family:arial,'黑体',SimHei;
+  font-family:fontLink;
   -webkit-font-smoothing: antialiased;
 }
 
