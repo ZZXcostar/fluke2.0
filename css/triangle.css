@@ -203,7 +203,7 @@
   z-index: 3;
   background-image: url('../img/7-大光线.png');
   background-repeat: no-repeat;
-  background-size: 115%;
+  background-size: 100%;
   animation:changeleft 6s linear infinite;
   -webkit-animation:changeleft 6s linear infinite;
   border-radius: 50%;
