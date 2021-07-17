@@ -14,7 +14,7 @@
             top:"10%",
         },2000,ACRanmiate);
         $(".ocvBox .ocvTitle").animate({
-            fontSize: '36px'
+            fontSize: '.3rem'
         },2000);
         $(".ocvBox .cn").animate({
             fontSize: '12px'
@@ -75,7 +75,7 @@
                 top:"10%",
             },2000,'swing',switchanmiate);
             $(".arcBox .arcTitle").animate({
-                fontSize: '36px'
+                fontSize: '.3rem'
             },2000);
             $(".arcBox .cn").animate({
                 fontSize: '12px'
@@ -89,10 +89,10 @@
             $(".switchBox").show()
             $(".switchBox").animate({
                 // left:"100%",
-                top:"98%",
+                top:"95%",
             },2000,'swing');
             $(".switchBox .switchTitle").animate({
-                fontSize: '36px'
+                fontSize: '.3rem'
             },2000);
             $(".switchBox .cn").animate({
                 fontSize: '12px'
@@ -274,6 +274,7 @@
                         // setTimeout(()=>{
                             $(".contentText .imgText").eq(0).fadeIn(1000)
                             $(".setbutton").fadeIn(1000)
+                            $(".dilaog").hide()
                         // },00)
                     });
                 });
