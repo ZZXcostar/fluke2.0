@@ -13,9 +13,12 @@
             left:"0%",
             top:"10%",
         },2000,ACRanmiate);
-        $(".ocvBox .ocvTitle").animate({
-            fontSize: '.3rem'
-        },2000);
+        setTimeout(()=>{
+            $(".ocvBox .ocvTitle").animate({
+                fontSize: '.3rem'
+            },2000);
+        },200)
+        
         $(".ocvBox .cn").animate({
             fontSize: '12px'
         },2000);
@@ -74,9 +77,11 @@
                 left:"100%",
                 top:"10%",
             },2000,'swing',switchanmiate);
+            setTimeout(()=>{
             $(".arcBox .arcTitle").animate({
                 fontSize: '.3rem'
             },2000);
+            },200)
             $(".arcBox .cn").animate({
                 fontSize: '12px'
             },2000);
@@ -91,9 +96,11 @@
                 // left:"100%",
                 top:"95%",
             },2000,'swing');
+            setTimeout(()=>{
             $(".switchBox .switchTitle").animate({
                 fontSize: '.3rem'
             },2000);
+            },200)
             $(".switchBox .cn").animate({
                 fontSize: '12px'
             },2000);
