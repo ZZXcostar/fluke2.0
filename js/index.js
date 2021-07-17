@@ -240,7 +240,7 @@
             function showProduct(){
                 $('.fourthAnimation').fadeIn()
                 $('.fourthAnimation').css('display','flex')
-                $('.product').animate({width: '600px',height: '600px'},1000)
+                $('.product').animate({width: '580px',height: '580px'},1000)
                 $('.productImg1').animate({width: '100%',height: '100%',top: '9%',left: '0%'},1000, hideLight)
             }
             function hideLight(){
