@@ -94,11 +94,11 @@
     z-index: 9;
     /* top: 100; */
     /* width: 100%; */
-    right: -100%;
+    right: -50%;
     /* font-size: 38px; */
 }
 .switchAnimation div:nth-child(1){
-    top: 20%;
+    top: 0%;
 }
 .switchAnimation div:nth-child(2){
     top: 20%;
@@ -107,34 +107,34 @@
     top: 40%;
 }
 .switchAnimation div:nth-child(4){
-    top: 50%;
+    top: 60%;
 }
 .switchAnimation div:nth-child(5){
-    top: 40%;
+    top: 0%;
 }
 .switchAnimation div:nth-child(6){
-    top: 30%;
+    top: 55%;
 }
 .switchAnimation div:nth-child(7){
     top: 25%;
 }
 .switchAnimation div:nth-child(8){
-    top: 10%;
+    top: 70%;
 }
 .switchAnimation div:nth-child(9){
-    top: 0%;
+    top: 35%;
 }
 .switchAnimation div img{
-    width: 100px;
+    width: 200px;
 }
 .switchAnimation div .omg{
-    width: 50px;
+    width: 100px;
 }
 .dscbottomBox {
     opacity: 0;
    /* padding-right:50px; */
    /* height: 150px; */
-   width: 2.7rem;
+   width: 2.9rem;
    position: relative;
    overflow: hidden;
 }
@@ -142,11 +142,12 @@
     display: flex;
     /* overflow: hidden; */
     /* position: relative; */
+    height: 0.5rem;
 }
 .imgbox {
     position: relative;
 
-   height: 100px;
+   /* height: 100px; */
 }
 .dscbottomBox .meritBox li{
    flex: 1;
@@ -167,9 +168,11 @@
 }
 .contentText .imgText{
     width: 100%;
-    line-height: 31px;
+    font-size: .08rem;
+  line-height: 0.14rem;
+    /* line-height: 31px; */
     text-align: center;
-    font-size: 16px;
+    /* font-size: 16px; */
     color: #fff;
     display: none;
 }
@@ -191,7 +194,8 @@
     cursor: pointer;
 }
 .setbuttonBox {
-    width: 570px;
+    /* width: 570px; */
+    width: 2.6rem;
     text-align: center;
     line-height: 20px;
     display: flex;

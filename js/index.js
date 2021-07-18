@@ -107,6 +107,9 @@
                 top:"10%",
             },2000,'swing',switchanmiate);
             setTimeout(()=>{
+                tanmu()
+            },1000)
+            setTimeout(()=>{
             $(".arcBox .arcTitle").animate({
                 fontSize: '.3rem'
             },2000);
@@ -118,7 +121,37 @@
                 $(".arcBox .cn").fadeOut()
             },2000)
         }
+        function tanmu() {
+            $(".switchAnimation div").eq(0).animate({
+                left:"-40%",
+            },4000)
+            $(".switchAnimation div").eq(1).animate({
+                left:"-60%",
+            },4000,'swing')
+            $(".switchAnimation div").eq(2).animate({
+                left:"-30%",
+            },4000,'swing')
+            $(".switchAnimation div").eq(3).animate({
+                left:"-80%",
+            },4000,'swing')
+            $(".switchAnimation div").eq(4).animate({
+                left:"-180%",
+            },7000,'swing')
+            $(".switchAnimation div").eq(5).animate({
+                left:"-180%",
+            },7000,'swing')
+            $(".switchAnimation div").eq(6).animate({
+                left:"-160%",
+            },7000,'swing')
+            $(".switchAnimation div").eq(7).animate({
+                left:"-150%",
+            },7000,'swing')
+            $(".switchAnimation div").eq(8).animate({
+                left:"-226%",
+            },8500,'swing')
+        }
         function switchanmiate() {
+            
             $(".arcAnimation").fadeOut()
             $(".switchBox").show()
             $(".switchBox").animate({
@@ -128,7 +161,7 @@
             setTimeout(()=>{
             $(".switchBox .switchTitle").animate({
                 fontSize: '.3rem'
-            },2000);
+            },2000,goamian);
             },200)
             $(".switchBox .cn").animate({
                 fontSize: '12px'
@@ -136,33 +169,6 @@
             setTimeout(()=>{
                 $(".switchBox .cn").fadeOut()
             },2000)
-            $(".switchAnimation div").eq(0).animate({
-                left:"-140%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(1).animate({
-                left:"-160%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(2).animate({
-                left:"-160%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(3).animate({
-                left:"-167%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(4).animate({
-                left:"-180%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(5).animate({
-                left:"-130%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(6).animate({
-                left:"-120%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(7).animate({
-                left:"-140%",
-            },2000,'swing')
-            $(".switchAnimation div").eq(8).animate({
-                left:"-116%",
-            },2000,'swing',goamian)
         }
 
         // 三角光点 光线动画
