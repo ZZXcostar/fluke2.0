@@ -281,7 +281,7 @@
                     $('.productImg2').fadeIn(100,showProductDesc)
 
                 }
-            function showProductDesc(){
+                function showProductDesc(){
                 
                     $('.product_content').animate({
                         'width': '50%',
@@ -305,7 +305,7 @@
                     });
                 }
 
-            }, 3500);
+            }, 3000);
             
         }
         // goamian()
