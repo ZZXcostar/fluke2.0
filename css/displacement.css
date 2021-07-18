@@ -131,10 +131,10 @@
     width: 50px;
 }
 .dscbottomBox {
-
+    opacity: 0;
    /* padding-right:50px; */
    /* height: 150px; */
-   width: 570px;
+   width: 2.7rem;
    position: relative;
    overflow: hidden;
 }
