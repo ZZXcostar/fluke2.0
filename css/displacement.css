@@ -179,7 +179,7 @@
 .setbutton {
     position: relative;
     z-index: 999;
-    height: 36px !important;
+    height: 0.15rem !important;
     display: none;
     /* position: absolute; */
     bottom: 0;
@@ -195,7 +195,8 @@
 }
 .setbuttonBox {
     /* width: 570px; */
-    width: 2.6rem;
+    width: 2.8rem;
+    margin-top: 0.1rem;
     text-align: center;
     line-height: 20px;
     display: flex;

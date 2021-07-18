@@ -27,7 +27,7 @@
             }
             polling();
         }
-        // backgroundAnimation()
+        backgroundAnimation()
         $(".meritBox li").mouseover(function(){
             $(".contentText .imgText").hide();
             // $(".meritBox .imgbox").css({top:"0px"});
