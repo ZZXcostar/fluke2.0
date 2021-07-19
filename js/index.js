@@ -178,19 +178,19 @@
 
             $(".lineRight").fadeIn()
             $(".lineImg3").addClass("intro");
-            $('.lineImg3').animate({left:'83%',opacity: '0'},1000,setblack1);
+            $('.lineImg3').animate({left:'83%',opacity: '0'},500,setblack1);
             setTimeout(() => {
                 $(".lineTop").fadeIn()
                 $(".lineImg1").addClass("intro");
-                $('.lineImg1').animate({left:'83%',opacity: '0'},1000,setblack2);
+                $('.lineImg1').animate({left:'83%',opacity: '0'},500,setblack2);
                 $('.lineImg1').css('left', '0%')
-            }, 1000);
+            }, 450);
             setTimeout(() => {
                 $(".lineLeft").fadeIn()
                 $(".lineImg2").addClass("intro");
-                $('.lineImg2').animate({left:'83%',opacity: '0'},1000,setblack3);
+                $('.lineImg2').animate({left:'83%',opacity: '0'},500,setblack3);
                 $('.lineImg2').css('left', '0%')
-            }, 2000);
+            }, 900);
         
             function setblack1(){
                 $('.lineImg3').css('left', '0%')
@@ -259,32 +259,29 @@
                 }else{
                     $('.secondAnimation').animate({left: '47.7%',top: '47%'},1000)
                 }
-                $('.triangle_content').animate({width: '100px',height: '70px'},1000,showLight);
+                $('.triangle_content').animate({width: '80px',height: '50px'},1000,showProduct);
                 
-                function showLight(){
-                    $('.secondAnimation').fadeOut()
-                    $('.thirdAnimation').fadeIn()
-                    setTimeout(()=>{
-                    $('.thirdAnimation').fadeOut(0, showProduct)
-                    },500)
-                }
+                // function showLight(){
+                //     $('.secondAnimation').fadeOut()
+                //     $('.thirdAnimation').fadeIn()
+                //     setTimeout(()=>{
+                //     $('.thirdAnimation').fadeOut(0, showProduct)
+                //     },500)
+                // }
                 function showProduct(){
+                    $('.secondAnimation').fadeOut()
                     $('.fourthAnimation').fadeIn()
                     $('.fourthAnimation').css('display','flex')
-                    if(isPCFlag){
-                        $('.product').animate({width: '2.7rem',height: '2.7rem'},1000)
-                    }else{
-                        $('.product').animate({width: '3rem',height: '3rem'},1000)
-                    }
-                    $('.productImg1').animate({width: '100%',height: '100%',top: '46px',left: '0%'},1000, hideLight)
+                    $('.product').fadeIn(1000)
+                    $('.productImg1').fadeIn(1000, hideLight)
                 }
                 function hideLight(){
-                    $('.lightImg2').fadeOut()
+                    // $('.lightImg2').fadeOut()
                     $('.productImg1').css('background-image',"url('./img/8-产品1（无光源+倒影）.png')")
                     // $('.productImg1').fadeOut(100,()=>{
                     //     $('.productImg2').fadeIn()
                     // })
-                    $('.productImg2').fadeIn(100,showProductDesc)
+                    $('.productImg2').fadeIn(1000,showProductDesc)
 
                 }
                 function showProductDesc(){
@@ -311,7 +308,7 @@
                     });
                 }
 
-            }, 3000);
+            }, 1500);
             
         }
         // goamian()
