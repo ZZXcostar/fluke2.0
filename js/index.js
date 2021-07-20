@@ -328,18 +328,18 @@
             }
         });
         $(".sbumit").click(()=>{
-            if(isEmail($(".email").val())) {
+            if(!isEmail($(".email").val())) {
                 $(".email").next(".verification").show()
                 
             }else {
                 $(".email").next(".verification").hide()
             }
-            if(isCellphone($(".phone").val())) {
+            if(!isCellphone($(".phone").val())) {
                 $(".phone").next(".verification").show()
             }else {
                 $(".phone").next(".verification").hide()
             }
-            if(!isEmail($(".email").val())&&!isCellphone($(".phone").val())){
+            if(isEmail($(".email").val())&&isCellphone($(".phone").val())){
                 CloseDiv('MyDiv','fade')
                 $(".dialog input").val("")
             }
