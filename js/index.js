@@ -328,6 +328,8 @@
             }
         });
         $(".sbumit").click(()=>{
+            // console.log(isEmail($(".email").val()))
+            // console.log(isCellphone($(".phone").val()))
             if(!isEmail($(".email").val())) {
                 $(".email").next(".verification").show()
                 
@@ -339,14 +341,36 @@
             }else {
                 $(".phone").next(".verification").hide()
             }
-            if(isEmail($(".email").val())&&isCellphone($(".phone").val())){
+            if(isEmail($(".email").val()) && isCellphone($(".phone").val())){
                 CloseDiv('MyDiv','fade')
                 $(".dialog input").val("")
+                // 方案一：直接取项目资源文件
+                
+                // var url = "./static/pdf/DataSheet_BT5300-v5.pdf";
+                // window.open(url);
+                let a = document.createElement('a');
+                a.setAttribute('href','./static/pdf/DataSheet_BT5300-v5.pdf');
+                a.setAttribute('download','BT5300-v5.pdf');
+                a.setAttribute('target','_blank');
+                document.body.appendChild(a);
+                a.style.display = 'none';
+                a.click();
+                document.body.removeChild(a)
+
+
+                // 方案二：通过接口获取文件流 content 创建下载任务
+                // var fileName = 'BT5300-v5.pdf'
+                // var aTag = document.createElement('a');
+                // var blob = new Blob([content],{ type: 'application/pdf' });
+                // aTag.download = fileName;
+                // aTag.href = URL.createObjectURL(blob);
+                // aTag.click();
+                // URL.revokeObjectURL(blob);
+                // document.body.removeChild(aTag)
             }
         })
         
     }
-
     function ShowDiv(show_div, bg_div) {
         $("#"+show_div).fadeIn(300)
         $("#"+bg_div).fadeIn(300)
@@ -371,7 +395,7 @@
         * 
         */
         var pattern =  /^1\d{10}$|^(0\d{2,3}-?|0\d2,3)?[1-9]\d{4,7}(-\d{1,8})?$/;
-        return str?pattern.test(str):true;
+        return str?pattern.test(str):false;
     }
     function isEmail(str){
         /**
@@ -383,7 +407,7 @@
          * 5.邮件提供商域可以包含特殊字符-、_、.
          */
         var pattern = /^([a-zA-Z0-9]+[-_.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[-_.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,6}$/;
-        return str?pattern.test(str):true;
+        return str?pattern.test(str):false;
     }
     
        
