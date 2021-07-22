@@ -216,12 +216,13 @@ input{
 }
 
 .contentText .imgText {
-  font-size: .08rem;
+  font-size: .085rem;
+  height: .01rem;
   line-height: 0.14rem;
 }
 .setbutton {
   height: .2rem !important;
-  margin-top: 0.2rem;
+  /* margin-top: 0.2rem; */
 }
 .ocvTitle, .arcTitle, .switchTitle{
   font-size: 1rem;
