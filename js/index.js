@@ -39,7 +39,7 @@
             $(".meritBox .imgbox").animate({top:"0px"},100);
         });
         $(".ocvBox").animate({
-            left:"10%",
+            left:"0%",
             top:"10%",
         },2000,ACRanmiate);
         setTimeout(()=>{
@@ -103,7 +103,7 @@
             },50)
             $(".arcBox").show()
             $(".arcBox").animate({
-                left:"90%",
+                left:"100%",
                 top:"10%",
             },2000,'swing',switchanmiate);
             setTimeout(()=>{
