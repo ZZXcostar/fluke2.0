@@ -2,6 +2,7 @@
 .secondAnimation{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: relative;
   /* top: 50%;
@@ -15,8 +16,8 @@
   position: relative;
 }
 .triangle_contents{
-  width: 760px;
-  height: 564px;
+  width: 900px;
+  height: 504px;
   margin-top: 12px;
   padding: 20px;
   position: absolute;

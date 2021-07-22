@@ -39,7 +39,7 @@
             $(".meritBox .imgbox").animate({top:"0px"},100);
         });
         $(".ocvBox").animate({
-            left:"0%",
+            left:"8%",
             top:"10%",
         },2000,ACRanmiate);
         setTimeout(()=>{
@@ -103,7 +103,7 @@
             },50)
             $(".arcBox").show()
             $(".arcBox").animate({
-                left:"100%",
+                left:"95%",
                 top:"10%",
             },2000,'swing',switchanmiate);
             setTimeout(()=>{
@@ -259,7 +259,7 @@
                 }else{
                     $('.secondAnimation').animate({left: '0%',top: '-6%'},1000)
                 }
-                $('.triangle_contents').animate({width: '80px',height: '50px'},1000);
+                $('.triangle_contents').animate({width: '0px',height: '0px'},1000);
                 $('.triangle_content').animate({width: '80px',height: '50px'},1000,showProduct);
                 
                 // function showLight(){
