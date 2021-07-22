@@ -201,7 +201,7 @@ input{
 /* 模态框样式结束 */
 
 .dscbottomBox, .setbuttonBox {
-  width: 2.6rem;
+  width: 2.8rem;
 }
 .meritBox {
   height: 0.5rem;
@@ -228,6 +228,7 @@ input{
 }
 .ocvBox .cn, .arcBox .cn, .switchBox .cn{
   font-size: .3rem;
+  line-height: .2rem;
 }
 .ocvAnimationImg , .ocvAnimationImg1, .ocvAnimationImg2{
   width: 3rem;
