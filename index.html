@@ -205,7 +205,7 @@
   <!-- 移动端提示start -->
   <div class="tip">
     <img class="tip_img" src="./img/旋转.png">
-    <p style="color: #fff;">请将手机旋转至横屏观看效果更佳</p>
+    <p style="color: #fff;">请将设备旋转至横屏观看效果更佳</p>
   </div>
   <!-- 移动端提示end -->
 
@@ -237,7 +237,7 @@
 <script src="./js/index.js"></script>
 <script>
     $(function(){
-      let isPCFlag = isPC()
+      let isPCFlag = goPAGE()
       console.log(isPCFlag)
       if(isPCFlag){
         startPcActive(isPCFlag)
@@ -268,7 +268,7 @@
     // 浏览器中看到屏幕旋转带来样式
     (function(){
       let active = 0;
-      let isPCFlag = isPC()
+      let isPCFlag = goPAGE()
       if(isPCFlag) return
       var supportOrientation = (typeof window.orientation === 'number' &&
       typeof window.onorientationchange === 'object');
