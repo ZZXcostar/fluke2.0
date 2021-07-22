@@ -46,11 +46,12 @@
             $(".ocvBox .ocvTitle").animate({
                 fontSize: '.3rem'
             },2000);
+            $(".ocvBox .cn").animate({
+                fontSize: '12px'
+            },2000);
         },200)
         
-        $(".ocvBox .cn").animate({
-            fontSize: '12px'
-        },2000);
+        
         setTimeout(()=>{
             $(".ocvBox .cn").fadeOut()
         },2000)
@@ -103,7 +104,7 @@
             },50)
             $(".arcBox").show()
             $(".arcBox").animate({
-                left:"95%",
+                left:"92%",
                 top:"10%",
             },2000,'swing',switchanmiate);
             setTimeout(()=>{

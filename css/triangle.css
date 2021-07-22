@@ -16,10 +16,11 @@
   position: relative;
 }
 .triangle_contents{
-  width: 900px;
-  height: 564px;
+  width: 920px;
+  height: 584px;
   margin-top: 12px;
-  padding: 20px;
+  /* padding: 20px; */
+  /* top: -10px; */
   position: absolute;
 }
 .triangle_content_big{
