@@ -214,6 +214,7 @@ input{
   position: absolute; left: 50%; top: 50%;
   transform: translate(-50%, -50%); 
 }
+
 .contentText .imgText {
   font-size: .08rem;
   line-height: 0.14rem;
