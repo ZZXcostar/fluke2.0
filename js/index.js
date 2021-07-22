@@ -285,12 +285,11 @@
 
                 }
                 function showProductDesc(){
-                
                     $('.product_content').animate({
-                        'width': '50%',
+                        'width': isPCFlag? '50%': '55%',
                     }, 1000, 'linear');
                     $('.product_desc').animate({
-                        'width': '50%',
+                        'width': isPCFlag? '50%': '45%',
                     }, 1000, 'linear',()=>{
                         $('.title_img').animate({
                             'opacity': '1'
