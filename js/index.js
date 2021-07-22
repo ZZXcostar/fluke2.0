@@ -260,7 +260,9 @@
                 }else{
                     $('.secondAnimation').animate({left: '0%',top: '-6%'},1000)
                 }
-                $('.triangle_contents').animate({width: '0px',height: '0px'},1000);
+                $('.triangle_contents').animate({width: '80px',height: '80px'},1000,()=>{
+                    $('.triangle_contents').fadeOut()
+                });
                 $('.triangle_content').animate({width: '80px',height: '50px'},1000,showProduct);
                 
                 // function showLight(){
