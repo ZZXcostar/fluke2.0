@@ -16,6 +16,13 @@
   padding: 0.02rem;
   position: relative;
 }
+.triangle_contents{
+  width: 3.3px;
+  padding: .5rem;
+  height: 2.7rem;
+  margin-top: 0.06rem;
+  position: absolute;
+}
 .triangle{
   height: 100%;
   position: relative;
