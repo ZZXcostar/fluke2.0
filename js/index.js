@@ -257,7 +257,7 @@
                 if(isPCFlag){
                     $('.secondAnimation').animate({left: '45%'},1000)
                 }else{
-                    $('.secondAnimation').animate({left: '0%',top: '0%'},1000)
+                    $('.secondAnimation').animate({left: '0%',top: '-6%'},1000)
                 }
                 $('.triangle_content').animate({width: '80px',height: '50px'},1000,showProduct);
                 
