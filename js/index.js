@@ -156,7 +156,7 @@
             $(".switchBox").show()
             $(".switchBox").animate({
                 // left:"100%",
-                top:"95%",
+                top:"90%",
             },2000,'swing');
             setTimeout(()=>{
             $(".switchBox .switchTitle").animate({

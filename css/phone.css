@@ -108,8 +108,8 @@ body {
   display: none;
   position: absolute;
   border-radius: 20px;
-  top: 20%;
-  left: 1.6rem;
+  /* top: 20%; */
+  /* left: 1.6rem; */
   width: 4rem;
   height: 2.2rem;
   background-color: white;
