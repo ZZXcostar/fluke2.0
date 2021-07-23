@@ -39,8 +39,8 @@
             $(".meritBox .imgbox").animate({top:"0px"},100);
         });
         $(".ocvBox").animate({
-            left:"8%",
-            top:"10%",
+            left:"10%",
+            top:"12%",
         },2000,ACRanmiate);
         setTimeout(()=>{
             $(".ocvBox .ocvTitle").animate({
@@ -105,7 +105,7 @@
             $(".arcBox").show()
             $(".arcBox").animate({
                 left:"92%",
-                top:"10%",
+                top:"12%",
             },2000,'swing',switchanmiate);
             setTimeout(()=>{
                 tanmu()
@@ -254,16 +254,17 @@
                 },1000);
 
 
-                $('.secondAnimation').css('position','absolute')
+                
                 if(isPCFlag){
+                    $('.secondAnimation').css('position','absolute')
                     $('.secondAnimation').animate({left: '45%'},1000)
                 }else{
-                    $('.secondAnimation').animate({left: '0%',top: '-6%'},1000)
+                    $('.secondAnimation').animate({left: '0%',top: '-12%'},1000)
                 }
-                $('.triangle_contents').animate({width: '80px',height: '80px'},1000,()=>{
-                    $('.triangle_contents').fadeOut()
+                $('.triangle_contents').animate({width: '0',height: '0'},1000,()=>{
+                    $('.triangle_contents').css({'display': 'none'})
                 });
-                $('.triangle_content').animate({width: '80px',height: '50px'},1000,showProduct);
+                $('.triangle_content').animate({width: '0',height: '0'},1000,showProduct);
                 
                 // function showLight(){
                 //     $('.secondAnimation').fadeOut()
@@ -273,6 +274,10 @@
                 //     },500)
                 // }
                 function showProduct(){
+                    if(!isPCFlag){
+                        $('.secondAnimation').css('position','absolute')
+                    }
+                    $('.triangle_content').css({'display': 'none'})
                     $('.secondAnimation').fadeOut()
                     $('.fourthAnimation').fadeIn()
                     $('.fourthAnimation').css('display','flex')
