@@ -150,7 +150,7 @@
 .lightImg1{
   width: 200px;
   height: 200px;
-  background-image: url('../img/6-光线.png');
+  background-image: url('../img/6-lightLine.png');
   background-repeat: no-repeat;
   background-size: 100%;
   animation:changeleft 6s linear infinite;
@@ -182,7 +182,7 @@
   top: 46px;
   left: 0%;
   z-index: 5;
-  background-image: url('../img/8-产品1（无光源）.png');
+  background-image: url('../img/8-1-product-none.png');
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -193,7 +193,7 @@
   animation:fade2 3s infinite;
   -webkit-animation:fade2 3s infinite;
   display: none;
-  background-image: url('../img/8-产品1（发光+倒影）.png');
+  background-image: url('../img/8-1-product.png');
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -215,7 +215,7 @@
   position: absolute;
   top: 0;
   z-index: 3;
-  background-image: url('../img/7-大光线.png');
+  background-image: url('../img/7-biglightline.png');
   background-repeat: no-repeat;
   background-size: 100%;
   animation:changeleft 6s linear infinite;

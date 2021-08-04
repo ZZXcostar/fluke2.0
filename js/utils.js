@@ -1,7 +1,7 @@
 //判断是否在微信中
 function isWechat() {
   var ua = window.navigator.userAgent.toLowerCase();
-  if (ua.match(/micromessenger/i) == "micromessenger") {
+  if (ua.match(/Micromessenger/i) == "micromessenger") {
     return true;
   } else {
     return false;

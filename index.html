@@ -29,14 +29,14 @@
         <img src="./img/logo.png" />
       </div>
       <div class="header_right d-flex align-center justify-between">
-        <div class="headerText">全国热线: 400-800-3435</div>
-        <img src="./img/12-按钮.png" onclick="ShowDiv('MyDiv','fade')"  class="headerHerf">
+        <span class="headerText">全国热线: 400-800-3435</span>
+        <img src="./img/12-button.png" onclick="ShowDiv('MyDiv','fade')"  class="headerHerf">
       </div>
     </header>
     <!-- 头部信息end -->
 
     <!-- 内容区域start -->
-    <section id="pageBody" style="background-image: url('./img/背景-1.jpg');">
+    <section id="pageBody" style="background-image: url('./img/bg-1.jpg');">
       <!-- 渐入动画start -->
 
       <!-- 渐入动画end -->
@@ -86,17 +86,17 @@
           <div class="triangle">
               <div class="line lineTop">
                   <div class="lineImgContent">
-                      <img class="lineImg1" src="./img/4-光点1-2.png" />
+                      <img class="lineImg1" src="./img/point1-2.png" />
                   </div>
               </div>
               <div class="line lineLeft">
                   <div class="lineImgContent">
-                      <img class="lineImg2" src="./img/4-光点1-2.png" />
+                      <img class="lineImg2" src="./img/point1-2.png" />
                   </div>
               </div>
               <div class="line lineRight">
                   <div class="lineImgContent">
-                      <img class="lineImg3" src="./img/4-光点1-2.png" />
+                      <img class="lineImg3" src="./img/point1-2.png" />
                   </div>
               </div>
           </div>
@@ -126,8 +126,8 @@
         <div class="product_desc">
           <div class="product_desc_top">
             <div class="title_img">
-              <img class="product_desc_top_img1" src="./img/11-标题.png">
-              <img class="product_desc_top_img2" src="./img/11-副标题.png">
+              <img class="product_desc_top_img1" src="./img/11-title.png">
+              <img class="product_desc_top_img2" src="./img/11-subTitle.png">
             </div>
             <div class="dscbottomBox">
                 <div class="dilaog"></div>
@@ -172,7 +172,7 @@
                 </div>
               </div>
               <div class="setbuttonBox">
-                <img src="./img/12-按钮.png" onclick="ShowDiv('MyDiv','fade')" class="headerHerf setbutton">
+                <img src="./img/12-button.png" onclick="ShowDiv('MyDiv','fade')" class="headerHerf setbutton">
               </div>
           </div>
           
@@ -199,14 +199,14 @@
         <span>|</span>
         <span>沪ICP备11037028号-20</span>
       </div>
-      <img class="footer_icon" src="./img/1-国徽.png">
+      <img class="footer_icon" src="./img/nationalEmblem.png">
     </footer>
     <!-- 底部end -->
   </div>
 
   <!-- 移动端提示start -->
   <div class="tip">
-    <img class="tip_img" src="./img/旋转.png">
+    <img class="tip_img" src="./img/spin.png">
     <p style="color: #fff;">请将设备旋转至横屏观看效果更佳</p>
   </div>
   <!-- 移动端提示end -->
@@ -239,8 +239,10 @@
 <script src="./js/index.js"></script>
 <script>
     $(function(){
+      let isWexin = isWechat()
       let isPCFlag = goPAGE()
-      console.log(isPCFlag)
+      // console.log(isWexin)
+      // console.log(isPCFlag)
       if(isPCFlag){
         startPcActive(isPCFlag)
         // loadjscssfile("do.js","js");
@@ -249,6 +251,14 @@
         // 判断是否在手机中加载不同的样式
         loadjscssfile("./css/phone.css","css");
         loadjscssfile("./css/triangle_phone.css","css");
+        if(isWexin){
+          $('.mobieStyle').css('height','115vh');
+          // var hight=window.screen.height - window.innerHeight;
+          // console.log(hight)
+          // if(hight>0){
+          //   $('.mobieStyle').css('height',`calc(100vh + ${hight}px)`);
+          // }
+        }
       }
     })
     function startPcActive(isPCFlag){

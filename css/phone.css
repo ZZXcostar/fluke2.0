@@ -6,6 +6,9 @@
   #content{
     display: none !important;
   }
+  .white_content{
+    display: none !important;
+  }
   
 }
 

@@ -96,7 +96,7 @@ button {
 } */
 @font-face{
   font-family: 'fontLink';
-  src: url('./../static/fonts2.0/SourceHanSansCN-Light.otf');
+  src: url('./../static/fonts2.0/GBK.TTF');
 }
 body, html {
   height: 100%;
